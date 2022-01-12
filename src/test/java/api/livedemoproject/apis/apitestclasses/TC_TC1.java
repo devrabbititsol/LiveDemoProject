@@ -6,7 +6,6 @@ import com.utilities.BaseClass;
 import com.utilities.QFCustomizedCode;
 import com.utilities.ConfigFilesUtility;
 import api.livedemoproject.apis.apipageclasses.GetOrderDetailsDataset;
-import com.utilities.QFCustomizedCode;
 public class TC_TC1 extends BaseClass {
 	private ConfigFilesUtility configFileObj;
 
@@ -36,7 +35,7 @@ public class TC_TC1 extends BaseClass {
 				int bodyType = (Integer) c.getField("bodyType" + i).get(object);
 				String header = (String) c.getField("datasetHeader" + i).get(object);
 				String response = APIService.callRequest(configFileObj,apiName, urlParams, headers, reqType, bodyType, body, configFileObj.getProperty("dataset" +i), datasetResources, authenticationData, formurlEncodedData, formData, linkParams,statusParams);
-				QFCustomizedCode.customCode(header, response,"livedemoproject");
+				QFCustomizedCode.customCode(apiName, body, response,"livedemoproject");
 			}
 		}
 	}}
