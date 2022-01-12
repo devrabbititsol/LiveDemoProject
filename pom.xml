@@ -29,6 +29,7 @@
 		</repository>
 
 	</repositories>
+
 	 <dependencies>
 
 		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
@@ -200,6 +201,7 @@
 		</dependency>
 	</dependencies>
 
+
 	<build>
 		<defaultGoal>install</defaultGoal>
 		<plugins>
@@ -305,16 +307,15 @@
 				</plugins>
 			</build>
 		</profile>
-	
 		<profile>
-			<id>ts_testset2</id>
+			<id>ts_orderidlyandbeverages</id>
 			<build>
 				<plugins>
 					<!-- Compiler plug-in -->
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-compiler-plugin</artifactId>
-
+						<version>3.8.1</version>
 						<configuration>
 							<source>${jdk.level}</source>
 							<target>${jdk.level}</target>
@@ -324,11 +325,11 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-surefire-plugin</artifactId>
-						<version>2.19.1</version>
+						<version>3.0.0-M4</version>
 						<configuration>
 							<testFailureIgnore>true</testFailureIgnore>
 							<suiteXmlFiles>	
-								<suiteXmlFile>ts_testset2.xml</suiteXmlFile>
+								<suiteXmlFile>ts_orderidlyandbeverages.xml</suiteXmlFile>
 							</suiteXmlFiles>
 						</configuration>
 					</plugin>
@@ -337,14 +338,14 @@
 		</profile>
 
 		<profile>
-			<id>ts_ts2</id>
+			<id>ts_createupdateget</id>
 			<build>
 				<plugins>
 					<!-- Compiler plug-in -->
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-compiler-plugin</artifactId>
-
+						<version>3.8.1</version>
 						<configuration>
 							<source>${jdk.level}</source>
 							<target>${jdk.level}</target>
@@ -354,26 +355,27 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-surefire-plugin</artifactId>
-						<version>2.19.1</version>
+						<version>3.0.0-M4</version>
 						<configuration>
 							<testFailureIgnore>true</testFailureIgnore>
 							<suiteXmlFiles>	
-								<suiteXmlFile>ts_ts2.xml</suiteXmlFile>
+								<suiteXmlFile>ts_createupdateget.xml</suiteXmlFile>
 							</suiteXmlFiles>
 						</configuration>
 					</plugin>
 				</plugins>
 			</build>
 		</profile>
+
 		<profile>
-			<id>ts_getusers</id>
+			<id>ts_regressintestset</id>
 			<build>
 				<plugins>
 					<!-- Compiler plug-in -->
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-compiler-plugin</artifactId>
-
+						<version>3.8.1</version>
 						<configuration>
 							<source>${jdk.level}</source>
 							<target>${jdk.level}</target>
@@ -383,11 +385,11 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-surefire-plugin</artifactId>
-						<version>2.19.1</version>
+						<version>3.0.0-M4</version>
 						<configuration>
 							<testFailureIgnore>true</testFailureIgnore>
 							<suiteXmlFiles>	
-								<suiteXmlFile>ts_getusers.xml</suiteXmlFile>
+								<suiteXmlFile>ts_regressintestset.xml</suiteXmlFile>
 							</suiteXmlFiles>
 						</configuration>
 					</plugin>
@@ -403,7 +405,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-compiler-plugin</artifactId>
-
+						<version>3.8.1</version>
 						<configuration>
 							<source>${jdk.level}</source>
 							<target>${jdk.level}</target>
@@ -413,8 +415,10 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-surefire-plugin</artifactId>
-						<version>2.19.1</version>
+						<version>3.0.0-M4</version>
 						<configuration>
+							 <forkMode>once</forkMode>
+        					 <argLine>-Xms512m -Xmx512m</argLine>
 							<testFailureIgnore>true</testFailureIgnore>
 							<suiteXmlFiles>	
 								<suiteXmlFile>ts_orderidlyandvada.xml</suiteXmlFile>
@@ -424,6 +428,7 @@
 				</plugins>
 			</build>
 		</profile>
-</profiles>
+
+	</profiles>
 </project>
 
