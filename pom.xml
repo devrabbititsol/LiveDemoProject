@@ -365,7 +365,6 @@
 				</plugins>
 			</build>
 		</profile>
-</profiles>
 		<profile>
 			<id>ts_getusers</id>
 			<build>
@@ -425,6 +424,6 @@
 				</plugins>
 			</build>
 		</profile>
-
+</profiles>
 </project>
 
