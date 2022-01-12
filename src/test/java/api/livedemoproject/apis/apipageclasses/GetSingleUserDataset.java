@@ -8,7 +8,7 @@ public static String projectName = "livedemoproject";
 
 			/*--------Default Dataset-----------*/
 
-public static final String datasetHeader1 = "TC_GetAllUers-Default";
+public static final String datasetHeader1 = "TC_GetSingleUser-Default";
 
 public static final String datasetResources1 = "api/users/2";
 public static final int requestType1 = 1;
