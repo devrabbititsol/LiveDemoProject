@@ -305,7 +305,7 @@
 				</plugins>
 			</build>
 		</profile>
-	</profiles>
+	
 		<profile>
 			<id>ts_testset2</id>
 			<build>
@@ -365,6 +365,6 @@
 				</plugins>
 			</build>
 		</profile>
-
+</profiles>
 </project>
 
