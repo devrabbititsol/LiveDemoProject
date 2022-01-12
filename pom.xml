@@ -3,12 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>SmartQEFrameworkk</groupId>
-	<artifactId>SmartQEFrameworkk</artifactId>
+	<groupId>SmartQEFramework</groupId>
+	<artifactId>SmartQEFramework</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>SmartQEFrameworkk</name>
+	<name>SmartQEFramework</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -30,7 +30,7 @@
 
 	</repositories>
 
-	 <dependencies>
+	<dependencies>
 
 		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
 		<dependency>
@@ -221,12 +221,8 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.0.0-M4</version>
 				<configuration>
-
-					<!-- Uncomment it if you don't want your build to be failed in case 
-						of test errors -->
-					<testFailureIgnore>true</testFailureIgnore>
 					<suiteXmlFiles>
-						<xmlFile>testng.xml</xmlFile>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 					<!-- ADD working directory to get TestNG know we to find suite files -->
 					<workingDirectory>./</workingDirectory>
@@ -250,36 +246,7 @@
 	</dependencyManagement>
 	<profiles>
 		<profile>
-			<id>desktopsuite</id>
-			<build>
-				<plugins>
-					<!-- Compiler plug-in -->
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-compiler-plugin</artifactId>
-						<version>3.8.1</version>
-						<configuration>
-							<source>${jdk.level}</source>
-							<target>${jdk.level}</target>
-						</configuration>
-					</plugin>
-					<!-- Below plug-in is used to execute tests -->
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-surefire-plugin</artifactId>
-						<version>3.0.0-M5</version>
-						<configuration>
-							<testFailureIgnore>true</testFailureIgnore>
-							<suiteXmlFiles>
-								<suiteXmlFile>desktopsuite.xml</suiteXmlFile>
-							</suiteXmlFiles>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-		<profile>
-			<id>ts_test</id>
+			<id>ts_testsetdatat</id>
 			<build>
 				<plugins>
 					<!-- Compiler plug-in -->
@@ -298,38 +265,11 @@
 						<artifactId>maven-surefire-plugin</artifactId>
 						<version>3.0.0-M4</version>
 						<configuration>
-							<testFailureIgnore>true</testFailureIgnore>
-							<suiteXmlFiles>
-								<suiteXmlFile>ts_test.xml</suiteXmlFile>
-							</suiteXmlFiles>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-		<profile>
-			<id>ts_orderidlyandbeverages</id>
-			<build>
-				<plugins>
-					<!-- Compiler plug-in -->
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-compiler-plugin</artifactId>
-						<version>3.8.1</version>
-						<configuration>
-							<source>${jdk.level}</source>
-							<target>${jdk.level}</target>
-						</configuration>
-					</plugin>
-					<!-- Below plug-in is used to execute tests -->
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-surefire-plugin</artifactId>
-						<version>3.0.0-M4</version>
-						<configuration>
+							 <forkMode>once</forkMode>
+        					 <argLine>-Xms512m -Xmx512m</argLine>
 							<testFailureIgnore>true</testFailureIgnore>
 							<suiteXmlFiles>	
-								<suiteXmlFile>ts_orderidlyandbeverages.xml</suiteXmlFile>
+								<suiteXmlFile>ts_testsetdatat.xml</suiteXmlFile>
 							</suiteXmlFiles>
 						</configuration>
 					</plugin>
@@ -338,7 +278,7 @@
 		</profile>
 
 		<profile>
-			<id>ts_createupdateget</id>
+			<id>ts_finaltestsset</id>
 			<build>
 				<plugins>
 					<!-- Compiler plug-in -->
@@ -357,9 +297,11 @@
 						<artifactId>maven-surefire-plugin</artifactId>
 						<version>3.0.0-M4</version>
 						<configuration>
+							 <forkMode>once</forkMode>
+        					 <argLine>-Xms512m -Xmx512m</argLine>
 							<testFailureIgnore>true</testFailureIgnore>
 							<suiteXmlFiles>	
-								<suiteXmlFile>ts_createupdateget.xml</suiteXmlFile>
+								<suiteXmlFile>ts_finaltestsset.xml</suiteXmlFile>
 							</suiteXmlFiles>
 						</configuration>
 					</plugin>
@@ -368,7 +310,7 @@
 		</profile>
 
 		<profile>
-			<id>ts_regressintestset</id>
+			<id>ts_testset2</id>
 			<build>
 				<plugins>
 					<!-- Compiler plug-in -->
@@ -387,9 +329,43 @@
 						<artifactId>maven-surefire-plugin</artifactId>
 						<version>3.0.0-M4</version>
 						<configuration>
+							 <forkMode>once</forkMode>
+        					 <argLine>-Xms512m -Xmx512m</argLine>
 							<testFailureIgnore>true</testFailureIgnore>
 							<suiteXmlFiles>	
-								<suiteXmlFile>ts_regressintestset.xml</suiteXmlFile>
+								<suiteXmlFile>ts_testset2.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+		<profile>
+			<id>ts_getusers</id>
+			<build>
+				<plugins>
+					<!-- Compiler plug-in -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<version>3.8.1</version>
+						<configuration>
+							<source>${jdk.level}</source>
+							<target>${jdk.level}</target>
+						</configuration>
+					</plugin>
+					<!-- Below plug-in is used to execute tests -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.0.0-M4</version>
+						<configuration>
+							 <forkMode>once</forkMode>
+        					 <argLine>-Xms512m -Xmx512m</argLine>
+							<testFailureIgnore>true</testFailureIgnore>
+							<suiteXmlFiles>	
+								<suiteXmlFile>ts_getusers.xml</suiteXmlFile>
 							</suiteXmlFiles>
 						</configuration>
 					</plugin>
@@ -428,35 +404,7 @@
 				</plugins>
 			</build>
 		</profile>
-		<profile>
-			<id>ts_getusers</id>
-			<build>
-				<plugins>
-					<!-- Compiler plug-in -->
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-compiler-plugin</artifactId>
 
-						<configuration>
-							<source>${jdk.level}</source>
-							<target>${jdk.level}</target>
-						</configuration>
-					</plugin>
-					<!-- Below plug-in is used to execute tests -->
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-surefire-plugin</artifactId>
-						<version>2.19.1</version>
-						<configuration>
-							<testFailureIgnore>true</testFailureIgnore>
-							<suiteXmlFiles>	
-								<suiteXmlFile>ts_getusers.xml</suiteXmlFile>
-							</suiteXmlFiles>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-</profiles>
+	</profiles>
 </project>
 
