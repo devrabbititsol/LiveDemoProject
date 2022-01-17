@@ -3,8 +3,7 @@
 <suite name="Main Test Suite" parallel="tests">
 	<test name="chrometest">
   	<parameter name="browser" value="chrome"/>
-		<classes>			<class name="web.livedemoproject.idlyexpressweb.webtestclasses.TC_OrderIdlyTestcase" />			<class name="web.livedemoproject.idlyexpressweb.webtestclasses.TC_OrderIdly" />
-			<class name="com.fileupload.ReportUpload" />
+		<classes><class name="web.livedemoproject.idlyexpressweb.webtestclasses.TC_OrderIdlyTestcase" /><class name="web.livedemoproject.idlyexpressweb.webtestclasses.TC_OrderIdly" /><class name="com.fileupload.ReportUpload" />
 		</classes>
 	</test>
 </suite>
