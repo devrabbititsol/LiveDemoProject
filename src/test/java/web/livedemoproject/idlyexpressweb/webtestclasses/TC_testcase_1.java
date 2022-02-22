@@ -41,7 +41,6 @@ public class TC_testcase_1 extends BaseClass {
 			qf.clickAction(driver, screen1Obj._storesetup, configFileObj.getBooleanProperty("storesetup1"  + i + "click"));
 			if(configFileObj.getBooleanProperty("storesetup1"  + i + "click"))
 			printSuccessLogAndReport( "Clicked on Store setup");
-			qf.enter(driver, screen1Obj._storesetup);
 			qf.sendKeys(driver, screen1Obj._enterStoreName, configFileObj.getProperty("enterStoreName1"  + i + "input"));
 			printSuccessLogAndReport( "Entered Enter Store Name input: " + configFileObj.getProperty("enterStoreName1"  + i + "input"));
 			qf.sendKeys(driver, screen1Obj._enterYourDescription, configFileObj.getProperty("enterYourDescription1"  + i + "input"));
