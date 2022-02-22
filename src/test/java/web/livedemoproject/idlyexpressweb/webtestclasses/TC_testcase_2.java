@@ -41,7 +41,6 @@ public class TC_testcase_2 extends BaseClass {
 			qf.clickAction(driver, screen2Obj._storesetup, configFileObj.getBooleanProperty("storesetup1"  + i + "click"));
 			if(configFileObj.getBooleanProperty("storesetup1"  + i + "click"))
 			printSuccessLogAndReport( "Clicked on Store setup");
-			qf.enter(driver, screen2Obj._storesetup);
 			qf.sendKeys(driver, screen2Obj._enterYourDescription, configFileObj.getProperty("enterYourDescription1"  + i + "input"));
 			printSuccessLogAndReport( "Entered Enter Your Description input: " + configFileObj.getProperty("enterYourDescription1"  + i + "input"));
 			qf.sendKeys(driver, screen2Obj._enterYourAddress, configFileObj.getProperty("enterYourAddress1"  + i + "input"));
@@ -55,7 +54,6 @@ public class TC_testcase_2 extends BaseClass {
 			qf.clickAction(driver, screen2Obj._sAVE, configFileObj.getBooleanProperty("sAVE1"  + i + "click"));
 			if(configFileObj.getBooleanProperty("sAVE1"  + i + "click"))
 			printSuccessLogAndReport( "Clicked on SAVE");
-			qf.enter(driver, screen2Obj._sAVE);
 
 		} catch (Exception e) {
 			isElementDispalyed = false;
