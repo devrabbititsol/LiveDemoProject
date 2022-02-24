@@ -55,15 +55,12 @@ public class TC_OrderIdlyTestcase extends BaseClass {
 		IdlySelection idlySelectionObj = new IdlySelection();
 		try { 
 			windowHandle(driver);
-						qf.clickAction(driver, idlySelectionObj._close);
+						qf.wait(driver, idlySelectionObj._close);
+			qf.clickAction(driver, idlySelectionObj._close);
 			printSuccessLogAndReport( "Clicked on Close");
 			windowHandle(driver);
-						qf.clickAction(driver, idlySelectionObj._iconiconplusc);
-			printSuccessLogAndReport( "Clicked on icon icon-plus-c");
-			windowHandle(driver);
-						qf.clickAction(driver, idlySelectionObj._iconiconminusc);
-			printSuccessLogAndReport( "Clicked on icon icon-minus-c");
-			windowHandle(driver);
+						windowHandle(driver);
+						windowHandle(driver);
 						qf.clickAction(driver, idlySelectionObj._idlyV, configFileObj.getBooleanProperty("idlyV2"  + i + "click"));
 			if(configFileObj.getBooleanProperty("idlyV2"  + i + "click"))
 			printSuccessLogAndReport( "Clicked on Idly (V)");
@@ -89,9 +86,7 @@ public class TC_OrderIdlyTestcase extends BaseClass {
 			if(configFileObj.getBooleanProperty("podiIdlyV3"  + i + "click"))
 			printSuccessLogAndReport( "Clicked on Podi Idly (V)");
 			windowHandle(driver);
-						qf.clickAction(driver, podiIdlySelectionObj._iconiconplusc);
-			printSuccessLogAndReport( "Clicked on icon icon-plus-c");
-			windowHandle(driver);
+						windowHandle(driver);
 						qf.clickAction(driver, podiIdlySelectionObj._addtoCart, configFileObj.getBooleanProperty("addtoCart3"  + i + "click"));
 			if(configFileObj.getBooleanProperty("addtoCart3"  + i + "click"))
 			printSuccessLogAndReport( "Clicked on Add to Cart");
