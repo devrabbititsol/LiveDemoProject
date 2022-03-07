@@ -4,7 +4,7 @@
 	<test name="chrometest">
   	<parameter name="browser" value="chrome"/>
 			<classes>
-				<class name="web.livedemoproject.idlyexpressweb.webtestclasses.TC_testcase_1" />
+				<class name="web.livedemoproject.idlyexpressweb.webtestclasses.TC_testcase_2" />
 				<class name="com.fileupload.ReportUpload" />
 			</classes>
 	</test>
