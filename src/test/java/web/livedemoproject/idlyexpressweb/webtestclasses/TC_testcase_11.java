@@ -38,19 +38,22 @@ public class TC_testcase_11 extends BaseClass {
 
 		New_screen2 newscreen2Obj = new New_screen2();
 		try { 
-			qf.sendKeys(driver, newscreen2Obj._enterStoreName, configFileObj.getProperty("enterStoreName1"  + i + "input"));
-			printSuccessLogAndReport( "Entered Enter Store Name input: " + configFileObj.getProperty("enterStoreName1"  + i + "input"));
-			qf.sendKeys(driver, newscreen2Obj._enterYourDescription, configFileObj.getProperty("enterYourDescription1"  + i + "input"));
-			printSuccessLogAndReport( "Entered Enter Your Description input: " + configFileObj.getProperty("enterYourDescription1"  + i + "input"));
-			qf.sendKeys(driver, newscreen2Obj._enterPhoneNumber, configFileObj.getProperty("enterPhoneNumber1"  + i + "input"));
-			printSuccessLogAndReport( "Entered Enter Phone Number input: " + configFileObj.getProperty("enterPhoneNumber1"  + i + "input"));
-			qf.sendKeys(driver, newscreen2Obj._enterYourAddress, configFileObj.getProperty("enterYourAddress1"  + i + "input"));
-			printSuccessLogAndReport( "Entered Enter Your Address input: " + configFileObj.getProperty("enterYourAddress1"  + i + "input"));
-			qf.sendKeys(driver, newscreen2Obj._enterEmailAddress, configFileObj.getProperty("enterEmailAddress1"  + i + "input"));
-			printSuccessLogAndReport( "Entered Enter Email Address input: " + configFileObj.getProperty("enterEmailAddress1"  + i + "input"));
+			qf.clickAction(driver, newscreen2Obj._storesetup, configFileObj.getBooleanProperty("storesetup1"  + i + "click"));
+			if(configFileObj.getBooleanProperty("storesetup1"  + i + "click"))
+			printSuccessLogAndReport( "Clicked on Store setup");
 			qf.clickAction(driver, newscreen2Obj._sAVE, configFileObj.getBooleanProperty("sAVE1"  + i + "click"));
 			if(configFileObj.getBooleanProperty("sAVE1"  + i + "click"))
 			printSuccessLogAndReport( "Clicked on SAVE");
+			qf.sendKeys(driver, newscreen2Obj._enterYourDescription, configFileObj.getProperty("enterYourDescription1"  + i + "input"));
+			printSuccessLogAndReport( "Entered Enter Your Description input: " + configFileObj.getProperty("enterYourDescription1"  + i + "input"));
+			qf.sendKeys(driver, newscreen2Obj._enterYourAddress, configFileObj.getProperty("enterYourAddress1"  + i + "input"));
+			printSuccessLogAndReport( "Entered Enter Your Address input: " + configFileObj.getProperty("enterYourAddress1"  + i + "input"));
+			qf.sendKeys(driver, newscreen2Obj._enterStoreName, configFileObj.getProperty("enterStoreName1"  + i + "input"));
+			printSuccessLogAndReport( "Entered Enter Store Name input: " + configFileObj.getProperty("enterStoreName1"  + i + "input"));
+			qf.sendKeys(driver, newscreen2Obj._enterPhoneNumber, configFileObj.getProperty("enterPhoneNumber1"  + i + "input"));
+			printSuccessLogAndReport( "Entered Enter Phone Number input: " + configFileObj.getProperty("enterPhoneNumber1"  + i + "input"));
+			qf.sendKeys(driver, newscreen2Obj._enterEmailAddress, configFileObj.getProperty("enterEmailAddress1"  + i + "input"));
+			printSuccessLogAndReport( "Entered Enter Email Address input: " + configFileObj.getProperty("enterEmailAddress1"  + i + "input"));
 
 		} catch (Exception e) {
 			isElementDispalyed = false;
