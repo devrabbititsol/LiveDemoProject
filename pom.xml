@@ -435,7 +435,6 @@
 				</plugins>
 			</build>
 		</profile>
-</profiles>
 
 		<profile>
 			<id>ts_ords_and_sett_tst</id>
@@ -466,6 +465,7 @@
 				</plugins>
 			</build>
 		</profile>
+	</profiles>
 
 </project>
 
